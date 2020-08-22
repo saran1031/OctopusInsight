@@ -1,0 +1,53 @@
+Feature: Insight Page Functionalities
+
+  @Test
+  Scenario Outline: Search functionality with valid or invalid input             [90m# src/test/Resource/Insights.feature:3[0m
+    [36mGiven [0m[36muser is on the Insights Page of Octopus Group[0m
+    [36mWhen [0m[36muser clicks on the Search icon[0m
+    [36mAnd [0m[36muser types valid or invalid "<input>" in the search box[0m
+    [36mThen [0m[36muser should be able to see relevant searched result or an error message[0m
+
+    Examples: 
+
+  @Test
+  Scenario Outline: Search functionality with valid or invalid input             [90m# src/test/Resource/Insights.feature:10[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m                          [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mWhen [0m[32muser clicks on the Search icon[0m                                          [90m# InsightsPageSteps.user_clicks_on_the_Search_icon()[0m
+    [32mAnd [0m[32muser types valid or invalid "[0m[32m[1mOctopus Real Estate[0m[32m" in the search box[0m      [90m# InsightsPageSteps.user_types_valid_or_invalid_in_the_search_box(String)[0m
+    [32mThen [0m[32muser should be able to see relevant searched result or an error message[0m [90m# InsightsPageSteps.user_should_be_able_to_see_relevant_searched_result_or_an_error_message()[0m
+
+  @Test
+  Scenario Outline: Search functionality with valid or invalid input             [90m# src/test/Resource/Insights.feature:11[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m                          [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mWhen [0m[32muser clicks on the Search icon[0m                                          [90m# InsightsPageSteps.user_clicks_on_the_Search_icon()[0m
+    [32mAnd [0m[32muser types valid or invalid "[0m[32m[1mJava[0m[32m" in the search box[0m                     [90m# InsightsPageSteps.user_types_valid_or_invalid_in_the_search_box(String)[0m
+    [32mThen [0m[32muser should be able to see relevant searched result or an error message[0m [90m# InsightsPageSteps.user_should_be_able_to_see_relevant_searched_result_or_an_error_message()[0m
+
+  #  line number 10 - Octopus Real Estate is an example of valid input
+  #  line number 11 - Java is an example of invalid input
+  @Test
+  Scenario: 'About' Feature - Simon Rogerson                    [90m# src/test/Resource/Insights.feature:16[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m         [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mWhen [0m[32muser clicks on 'About' icon[0m                            [90m# InsightsPageSteps.user_clicks_on_About_icon()[0m
+    [32mAnd [0m[32muser clicks on 'Simon Rogerson' from dropdown list[0m      [90m# InsightsPageSteps.userClicksOnSimonRogersonFromDropdownList()[0m
+    [32mThen [0m[32muser should be able to see 'About Simon Rogerson' page[0m [90m# InsightsPageSteps.userShouldBeAbleToSeeAboutSimonRogersonPage()[0m
+
+  @Test
+  Scenario: Filter by Business                                         [90m# src/test/Resource/Insights.feature:23[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m                [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mWhen [0m[32muser selects any option from Filter by Business dropdown list[0m [90m# InsightsPageSteps.user_selects_any_option_from_Filter_by_Business_dropdown_list()[0m
+    [32mThen [0m[32muser should be able to see all posts from selected business[0m   [90m# InsightsPageSteps.user_should_be_able_to_see_all_posts_from_selected_business()[0m
+
+  @Test
+  Scenario: Navigate back to previous/Insights Page from Businesses page [90m# src/test/Resource/Insights.feature:29[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m                  [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mAnd [0m[32muser clicks on 'Businesses' icon[0m                                 [90m# InsightsPageSteps.user_clicks_on_Businesses_icon()[0m
+    [32mWhen [0m[32muser clicks on 'back arrow'[0m                                     [90m# InsightsPageSteps.user_clicks_on_back_arrow()[0m
+    [32mThen [0m[32muser should be able to navigate back to previous/Insights page[0m  [90m# InsightsPageSteps.user_should_be_able_to_navigate_back_to_previous_Insights_page()[0m
+
+  @Test
+  Scenario: Click on page number '2'                           [90m# src/test/Resource/Insights.feature:36[0m
+    [32mGiven [0m[32muser is on the Insights Page of Octopus Group[0m        [90m# InsightsPageSteps.user_is_on_the_Insights_Page_of_Octopus_Group()[0m
+    [32mWhen [0m[32muser scroll down the page[0m                             [90m# InsightsPageSteps.user_scroll_down_the_page()[0m
+    [32mAnd [0m[32muser clicks on '[0m[32m[1m2[0m[32m'[0m                                     [90m# InsightsPageSteps.user_clicks_on(int)[0m
+    [32mThen [0m[32muser should be able to see all the post from page '[0m[32m[1m2[0m[32m'[0m [90m# InsightsPageSteps.user_should_be_able_to_see_all_the_post_from_page(int)[0m

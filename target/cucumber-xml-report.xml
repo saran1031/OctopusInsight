@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="155.800179">
+<testcase classname="Insight Page Functionalities" name="Search functionality with valid or invalid input" time="36.542356">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+When user clicks on the Search icon.........................................passed
+And user types valid or invalid "Octopus Real Estate" in the search box.....passed
+Then user should be able to see relevant searched result or an error message.passed
+]]></system-out>
+</testcase>
+<testcase classname="Insight Page Functionalities" name="Search functionality with valid or invalid input 2" time="20.319469">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+When user clicks on the Search icon.........................................passed
+And user types valid or invalid "Java" in the search box....................passed
+Then user should be able to see relevant searched result or an error message.passed
+]]></system-out>
+</testcase>
+<testcase classname="Insight Page Functionalities" name="'About' Feature - Simon Rogerson" time="24.388041">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+When user clicks on 'About' icon............................................passed
+And user clicks on 'Simon Rogerson' from dropdown list......................passed
+Then user should be able to see 'About Simon Rogerson' page.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Insight Page Functionalities" name="Filter by Business" time="25.314636">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+When user selects any option from Filter by Business dropdown list..........passed
+Then user should be able to see all posts from selected business............passed
+]]></system-out>
+</testcase>
+<testcase classname="Insight Page Functionalities" name="Navigate back to previous/Insights Page from Businesses page" time="20.944249">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+And user clicks on 'Businesses' icon........................................passed
+When user clicks on 'back arrow'............................................passed
+Then user should be able to navigate back to previous/Insights page.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Insight Page Functionalities" name="Click on page number '2'" time="28.291428">
+<system-out><![CDATA[Given user is on the Insights Page of Octopus Group.........................passed
+When user scroll down the page..............................................passed
+And user clicks on '2'......................................................passed
+Then user should be able to see all the post from page '2'..................passed
+]]></system-out>
+</testcase>
+</testsuite>
